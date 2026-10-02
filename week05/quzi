@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+
+namespace quiz10_me1_1942
+{
+    public partial class Form1 : Form
+    {
+        private int count = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            System.Threading.Thread.Sleep(2000);
+            Graphics G = CreateGraphics();
+            G.DrawString("MouseDown", Font, Brushes.Black, e.X, e.Y);
+            G.Dispose();
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread.Sleep(2000);
+            count++;
+            Text = count.ToString();
+            Graphics G = CreateGraphics();
+            G.DrawString("MouseDoubleClick", Font, Brushes.Black, 0, 0);
+            G.Dispose();
+        }
+
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+     
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            System.Threading.Thread.Sleep(2000);
+            Graphics G = CreateGraphics();
+            G.DrawString("MouseClick", Font, Brushes.Black, e.X, e.Y);
+            G.Dispose();
+        }
+
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            System.Threading.Thread.Sleep(2000);
+            Graphics G = CreateGraphics();
+            G.DrawString("MouseDoubleClick", Font, Brushes.Black, e.X, e.Y);
+            G.Dispose();
+        }
+    }
+}
